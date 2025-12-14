@@ -1,38 +1,32 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// Layout Components
+import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-
-// Page Components
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Technologies from "./components/pages/Technologies";
-import Experience from "./components/pages/Experience";
-import Projects from "./components/pages/Projects";
-import Certifications from "./components/pages/Certifications";
-import Contact from "./components/pages/Contact";
+import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
+import Technologies from "./components/sections/Technologies";
+import Experience from "./components/sections/Experience";
+import Projects from "./components/sections/Projects";
+import Certifications from "./components/sections/Certifications";
+import Contact from "./components/sections/Contact";
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col bg-bg-primary">
+    <ThemeProvider>
+      <div className="min-h-screen bg-bg-light dark:bg-bg-dark transition-colors duration-300">
         <Navbar />
-        <main className="flex-1 pt-20">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/technologies" element={<Technologies />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/certifications" element={<Certifications />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+        <main>
+          <Hero />
+          <About />
+          <Technologies />
+          <Experience />
+          <Projects />
+          <Certifications />
+          <Contact />
         </main>
         <Footer />
       </div>
-    </Router>
+    </ThemeProvider>
   );
 }
 

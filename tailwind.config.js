@@ -1,47 +1,61 @@
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        "bg-primary": "#0A0A0A",
-        "bg-secondary": "#1A1A1A",
-        "bg-card": "#252525",
-        "bg-hover": "#2F2F2F",
-        "text-primary": "#FFFFFF",
-        "text-secondary": "#E0E0E0",
-        "text-muted": "#B0B0B0",
+        // Backgrounds
+        "bg-dark": "#000000",
+        "bg-dark-surface": "#0A0A0A",
+        "bg-light": "#FFFFFF",
+        "bg-light-surface": "#F8F8F8",
+
+        // Borders
+        "border-dark": "#1A1A1A",
+        "border-light": "#E5E5E5",
+
+        // Text colors for dark mode
+        "text-dark-primary": "#FFFFFF",
+        "text-dark-secondary": "#A0A0A0",
+        "text-dark-muted": "#6B6B6B",
+
+        // Text colors for light mode
+        "text-light-primary": "#000000",
+        "text-light-secondary": "#6B6B6B",
+        "text-light-muted": "#9B9B9B",
+
+        // Accent (minimal usage)
         "accent-yellow": "#FFD700",
-        "accent-yellow-dark": "#FFC400",
-        "accent-yellow-light": "#FFED4E",
-        "border-primary": "#333333",
-        "border-light": "#404040",
+        "accent-yellow-hover": "#FFC400",
       },
       fontFamily: {
         sans: [
+          "Inter",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
           "Roboto",
           "sans-serif",
         ],
-        mono: ["Courier New", "monospace"],
-      },
-      boxShadow: {
-        yellow: "0 0 20px rgba(255, 215, 0, 0.3)",
-        "yellow-strong": "0 0 30px rgba(255, 215, 0, 0.5)",
+        mono: ["JetBrains Mono", "Courier New", "monospace"],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out",
-        "fade-in-up": "fadeInUp 0.8s ease-out",
+        "fade-up": "fadeUp 0.8s ease-out",
+        "slide-in": "slideIn 0.5s ease-out",
       },
       keyframes: {
         fadeIn: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
-        fadeInUp: {
+        fadeUp: {
           "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        slideIn: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
     },

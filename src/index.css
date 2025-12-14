@@ -2,61 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom base styles */
 @layer base {
   * {
     @apply m-0 p-0 box-border;
-  }
-
-  body {
-    @apply bg-bg-primary text-text-primary font-sans antialiased overflow-x-hidden;
   }
 
   html {
     @apply scroll-smooth;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold text-text-primary;
+  body {
+    @apply font-sans antialiased;
+    @apply bg-bg-light dark:bg-bg-dark;
+    @apply text-text-light-primary dark:text-text-dark-primary;
+    @apply transition-colors duration-300;
   }
 
-  p {
-    @apply leading-relaxed text-text-secondary;
+  /* Smooth scrolling offset for fixed navbar */
+  section {
+    @apply scroll-mt-20;
   }
 
-  a {
-    @apply text-accent-yellow no-underline transition-colors duration-200;
-  }
-
-  a:hover {
-    @apply text-accent-yellow-light;
-  }
-}
-
-/* Custom scrollbar */
-@layer utilities {
+  /* Custom scrollbar - Dark mode */
   ::-webkit-scrollbar {
     @apply w-2;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-bg-secondary;
+    @apply bg-bg-light-surface dark:bg-bg-dark-surface;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-accent-yellow rounded;
+    @apply bg-border-light dark:bg-border-dark rounded;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-accent-yellow-light;
+    @apply bg-text-light-muted dark:bg-text-dark-muted;
   }
 
+  /* Selection */
   ::selection {
-    @apply bg-accent-yellow text-bg-primary;
+    @apply bg-accent-yellow/20;
+  }
+}
+
+@layer utilities {
+  /* Section Container */
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-20 md:py-32;
+  }
+
+  /* Typography */
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-4;
+    @apply text-text-light-primary dark:text-text-dark-primary;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl;
+    @apply text-text-light-secondary dark:text-text-dark-secondary;
+    @apply max-w-2xl;
+  }
+
+  /* Accent Line */
+  .accent-line {
+    @apply w-12 h-0.5 bg-accent-yellow;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-bg-light-surface dark:bg-bg-dark-surface;
+    @apply border border-border-light dark:border-border-dark;
+    @apply rounded-xl p-6;
+    @apply transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-accent-yellow;
   }
 }
