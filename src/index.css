@@ -42,7 +42,7 @@
 
   /* Selection */
   ::selection {
-    @apply bg-accent-yellow/20;
+    @apply bg-accent-light/20 dark:bg-accent-dark/20;
   }
 }
 
@@ -66,7 +66,7 @@
 
   /* Accent Line */
   .accent-line {
-    @apply w-12 h-0.5 bg-accent-yellow;
+    @apply w-12 h-0.5 bg-accent-light dark:bg-accent-dark;
   }
 
   /* Card styles */
@@ -78,6 +78,6 @@
   }
 
   .card:hover {
-    @apply border-accent-yellow;
+    @apply border-accent-light dark:border-accent-dark;
   }
 }

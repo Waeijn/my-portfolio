@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+
 import { useTheme } from "../../context/ThemeContext";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+
   const [activeSection, setActiveSection] = useState("home");
+
   const { darkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -11,42 +14,62 @@ function Navbar() {
       setScrolled(window.scrollY > 20);
 
       // Update active section based on scroll position
+
       const sections = [
         "home",
+
         "about",
+
         "technologies",
+
         "experience",
+
         "projects",
+
         "certifications",
+
         "contact",
       ];
+
       const current = sections.find((section) => {
         const element = document.getElementById(section);
+
         if (element) {
           const rect = element.getBoundingClientRect();
+
           return rect.top <= 100 && rect.bottom >= 100;
         }
+
         return false;
       });
+
       if (current) setActiveSection(current);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
     { id: "home", label: "Home" },
+
     { id: "about", label: "About" },
+
     { id: "technologies", label: "Tech" },
+
     { id: "experience", label: "Experience" },
+
     { id: "projects", label: "Projects" },
+
     { id: "certifications", label: "Certs" },
+
     { id: "contact", label: "Contact" },
   ];
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
+
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -63,14 +86,16 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
+
           <button
             onClick={() => scrollToSection("home")}
-            className="text-xl font-bold text-text-light-primary dark:text-text-dark-primary hover:text-accent-yellow transition-colors"
+            className="text-xl font-bold text-text-light-primary dark:text-text-dark-primary hover:text-accent-light dark:hover:text-accent-dark transition-colors"
           >
             John Wayne Landong
           </button>
 
           {/* Desktop Navigation */}
+
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <button
@@ -78,7 +103,7 @@ function Navbar() {
                 onClick={() => scrollToSection(link.id)}
                 className={`text-sm font-medium transition-colors ${
                   activeSection === link.id
-                    ? "text-accent-yellow"
+                    ? "text-accent-light dark:text-accent-dark"
                     : "text-text-light-secondary dark:text-text-dark-secondary hover:text-text-light-primary dark:hover:text-text-dark-primary"
                 }`}
               >
@@ -88,14 +113,15 @@ function Navbar() {
           </div>
 
           {/* Theme Toggle */}
+
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-bg-light-surface dark:bg-bg-dark-surface border border-border-light dark:border-border-dark hover:border-accent-yellow transition-colors"
+            className="p-2 rounded-lg bg-bg-light-surface dark:bg-bg-dark-surface border border-border-light dark:border-border-dark hover:border-accent-light dark:hover:border-accent-dark transition-colors group"
             aria-label="Toggle theme"
           >
             {darkMode ? (
               <svg
-                className="w-5 h-5 text-text-dark-primary"
+                className="w-5 h-5 text-text-dark-primary group-hover:text-accent-dark transition-colors"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -109,7 +135,7 @@ function Navbar() {
               </svg>
             ) : (
               <svg
-                className="w-5 h-5 text-text-light-primary"
+                className="w-5 h-5 text-text-light-primary group-hover:text-accent-light transition-colors"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

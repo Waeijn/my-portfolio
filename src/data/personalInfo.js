@@ -2,31 +2,48 @@ export const personalInfo = {
   name: "John Wayne Landong",
   firstName: "John Wayne",
   lastName: "Landong",
-  title: "Full Stack Developer",
-  subtitle: "Tech Enthusiast",
-  email: "johnwayne.landong@example.com",
-  phone: "+63 123 456 7890",
-  location: "Calamba, Laguna, Philippines",
-  bio: "Passionate software developer with a keen interest in building scalable web applications and solving complex problems. I love turning ideas into reality through clean, efficient code.",
+  title: "Computer Science Student",
+  subtitle: "Aspiring Software Engineer & Cybersecurity Engineer",
+  email: "johnwaynelandong@gmail.com",
+  phone: "+63 912 350 8966",
+  location: "Cabuyao, Laguna, Philippines",
+
+  // Hero Section Bio
+  bio: "I’m a Computer Science student passionate about building secure, scalable software and exploring the intersection of software engineering and cybersecurity. I enjoy turning ideas into practical, well-engineered solutions.",
+
   about: {
+    // Introduction (User's 'I’m driven by curiosity...')
     introduction:
-      "Hello! I'm John Wayne, a passionate full-stack developer based in the Philippines. I specialize in building exceptional digital experiences that combine beautiful design with robust functionality.",
+      "I’m driven by curiosity and a love for problem-solving, especially when it comes to creating software that’s both functional and secure. I value clean design, thoughtful architecture, and continuous learning.",
+
+    // Background (User's 'I’m currently a third-year...')
     background:
-      "I'm currently pursuing my degree in Computer Science at the University of Cabuyao, where I'm constantly expanding my knowledge in software development, algorithms, and system design.",
-    interests: [
-      "Web Development",
-      "Mobile App Development",
-      "Cloud Computing",
-      "Open Source Contribution",
-      "UI/UX Design",
-    ],
+      "I’m currently a third-year Computer Science student, developing projects across web, backend, and systems while building a strong foundation in cybersecurity and networking. My goal is to grow into a well-rounded engineer who understands both how systems are built and how they’re protected.",
+
+    // Values (User's 'I believe good software...')
     values:
-      "I believe in writing clean, maintainable code and creating solutions that make a real difference in people's lives. Continuous learning and staying updated with the latest technologies drive my passion for development.",
+      "I believe good software is built with intention—clean, secure, and maintainable—while keeping the user and long-term impact in mind. I value discipline, continuous learning, and responsibility in both code and collaboration.",
+
+    // Beyond Coding (User's 'Outside of coding...')
+    beyondCoding:
+      "Outside of coding, I enjoy reading, playing guitar, exploring game development, and learning about technology trends and security practices. These interests help me stay creative, focused, and balanced.",
+
+    // Interests (Inferred from user text)
+    interests: [
+      "Software Engineering",
+      "Cybersecurity",
+      "Web Development",
+      "System Design",
+      "Networking",
+      "Game Development",
+    ],
   },
+
   social: {
-    github: "https://github.com/johnwaynelandong",
-    linkedin: "https://linkedin.com/in/johnwaynelandong",
-    email: "mailto:johnwayne.landong@example.com",
+    github: "https://github.com/Waeijn",
+    linkedin: "https://www.linkedin.com/in/johnwaynelandong/",
+    email: "mailto:johnwaynelandong@gmail.com",
   },
-  resume: "/path/to/resume.pdf",
+
+  resume: "public/resume/johnwaynelandong_resume.pdf",
 };
