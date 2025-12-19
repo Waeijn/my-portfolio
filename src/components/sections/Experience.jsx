@@ -7,14 +7,14 @@ function Experience() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            Professional{" "}
+            My{" "}
             <span className="text-accent-light dark:text-accent-dark">
               Experience
             </span>
           </h1>
           <p className="text-text-light-secondary dark:text-text-dark-secondary text-lg max-w-2xl mx-auto">
-            My journey in software development and the roles that shaped my
-            career.
+            My journey in software development and the leadership roles that are
+            shaping my skills.
           </p>
           <div className="w-24 h-1 bg-accent-light dark:bg-accent-dark mx-auto mt-6 rounded-full"></div>
         </div>
@@ -71,10 +71,10 @@ function Experience() {
                 <div className="flex gap-3">
                   <span
                     className={
-                      "px-4 py-2 rounded-lg text-sm font-semibold " +
+                      "px-4 py-2 rounded-lg text-sm font-bold transition-colors " +
                       (exp.current
-                        ? "bg-accent-light dark:bg-accent-dark text-white"
-                        : "bg-bg-light dark:bg-bg-dark text-text-light-secondary dark:text-text-dark-secondary border border-border-light dark:border-border-dark")
+                        ? "bg-accent-light dark:bg-accent-dark text-white dark:text-bg-dark animate-pulse-slow"
+                        : "...")
                     }
                   >
                     {exp.current ? "Current" : exp.type}
@@ -153,7 +153,7 @@ function Experience() {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="inline-block px-8 py-4 bg-accent-light dark:bg-accent-dark text-white font-semibold rounded-lg hover:opacity-90 transition-all"
+            className="inline-block px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-bg-dark font-bold rounded-lg hover:opacity-90 transition-all shadow-lg shadow-accent-light/20 dark:shadow-accent-dark/10"
           >
             Get In Touch
           </a>

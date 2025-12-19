@@ -1,7 +1,7 @@
 export const experiences = [
   {
     id: 1,
-    position: "Technical Committee Member",
+    position: "Technical Committee",
     company: "AWS Cloud Club – University of Cabuyao",
     location: "Cabuyao, Laguna, Philippines",
     type: "Student Leadership",

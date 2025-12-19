@@ -22,52 +22,46 @@ function Technologies() {
           <div className="w-24 h-1 bg-accent-light dark:bg-accent-dark mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="space-y-16">
+        {/* Category Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {technologies.categories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="animate-fade-in-up">
-              <div className="flex items-center gap-4 mb-8">
-                {/* Generic Code Icon to replace emojis/placeholders */}
-                <svg
-                  className="w-8 h-8 text-accent-light dark:text-accent-dark"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                  />
-                </svg>
-                <h2 className="text-3xl font-bold">
-                  <span className="text-text-light-primary dark:text-text-dark-primary">
-                    {category.name}
-                  </span>
-                </h2>
+            <div
+              key={categoryIndex}
+              className="bg-bg-light-surface dark:bg-bg-dark-surface p-8 rounded-2xl border border-border-light dark:border-border-dark hover:border-accent-light dark:hover:border-accent-dark transition-all flex flex-col group/card"
+            >
+              {/* Category Header */}
+              <div className="flex items-center gap-4 mb-6">
+                <div className="text-accent-light dark:text-accent-dark">
+                  {/* Generic icon - can be replaced with category.icon if using components */}
+                  <svg
+                    className="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-text-light-primary dark:text-text-dark-primary">
+                  {category.name}
+                </h3>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Skills Tags Container */}
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="bg-bg-light-surface dark:bg-bg-dark-surface p-6 rounded-xl border border-border-light dark:border-border-dark hover:border-accent-light dark:hover:border-accent-dark transition-all group"
+                    className="py-2 px-4 rounded-lg bg-bg-light dark:bg-bg-dark border border-border-light dark:border-border-dark hover:text-accent-light dark:hover:text-accent-dark hover:border-accent-light dark:hover:border-accent-dark transition-all cursor-default group"
                   >
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-lg font-semibold text-text-light-primary dark:text-text-dark-primary">
-                        {skill.name}
-                      </h3>
-                      <span className="text-accent-light dark:text-accent-dark font-bold">
-                        {skill.level}%
-                      </span>
-                    </div>
-
-                    <div className="relative h-3 bg-bg-light dark:bg-bg-dark rounded-full overflow-hidden">
-                      <div
-                        className="absolute top-0 left-0 h-full bg-accent-light dark:bg-accent-dark rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                    <span className="text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -75,6 +69,7 @@ function Technologies() {
           ))}
         </div>
 
+        {/* Footer Learning Section */}
         <div className="mt-20 text-center">
           <div className="bg-bg-light-surface dark:bg-bg-dark-surface p-8 md:p-12 rounded-2xl border border-border-light dark:border-border-dark hover:border-accent-light dark:hover:border-accent-dark transition-all">
             <h2 className="text-2xl font-bold mb-4">
