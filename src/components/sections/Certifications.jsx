@@ -1,5 +1,6 @@
 import React from "react";
 import { certifications } from "../../data/certifications";
+import { ExternalLinkIcon } from "../../assets/icons";
 
 function Certifications() {
   return (
@@ -25,7 +26,7 @@ function Certifications() {
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="bg-bg-light-surface dark:bg-bg-dark-surface rounded-2xl border border-border-light dark:border-border-dark hover:border-accent-light dark:hover:border-accent-dark transition-all p-6"
+              className="bg-bg-light-surface dark:bg-bg-dark-surface rounded-2xl border border-border-light dark:border-border-dark hover:border-accent-light dark:hover:border-accent-dark transition-all p-6 flex flex-col"
             >
               <div className="flex justify-between items-start mb-3">
                 <h2 className="text-xl font-bold text-text-light-primary dark:text-text-dark-primary">
@@ -44,7 +45,7 @@ function Certifications() {
                 {cert.description}
               </p>
 
-              <div className="mb-4">
+              <div className="mb-6">
                 <h4 className="text-sm font-semibold text-text-light-primary dark:text-text-dark-primary mb-2">
                   Skills Gained:
                 </h4>
@@ -61,26 +62,14 @@ function Certifications() {
               </div>
 
               {cert.link && (
-                <div className="pt-4 border-t border-border-light dark:border-border-dark">
+                <div className="mt-auto pt-4 border-t border-border-light dark:border-border-dark">
                   <a
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-text-light-secondary dark:text-text-dark-secondary hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+                    className="inline-flex items-center gap-2 text-text-light-secondary dark:text-text-dark-secondary hover:text-accent-light dark:hover:text-accent-dark transition-colors"
                   >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
+                    <ExternalLinkIcon className="w-4 h-4" />
                     <span className="text-sm font-medium">View Credential</span>
                   </a>
                 </div>

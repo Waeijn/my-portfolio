@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "John Wayne Landong",
   firstName: "John Wayne",
   lastName: "Landong",
-  title: "Computer Science Student",
+  title: "Junior Computer Science Student",
   subtitle: "Aspiring Software Engineer & Cybersecurity Engineer",
   email: "johnwaynelandong@gmail.com",
   location: "Cabuyao, Laguna, Philippines",

@@ -1,5 +1,10 @@
 import React from "react";
 import { experiences } from "../../data/experience";
+import {
+  MapPinIcon,
+  ClockIcon,
+  ChevronDoubleRightIcon,
+} from "../../assets/icons";
 
 function Experience() {
   return (
@@ -35,35 +40,11 @@ function Experience() {
                   </h3>
                   <div className="flex flex-wrap gap-4 text-text-light-secondary dark:text-text-dark-secondary text-sm">
                     <div className="flex items-center gap-2">
-                      <svg
-                        className="w-4 h-4 text-accent-light dark:text-accent-dark"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17.657 16.727A8 8 0 016.343 7.273L7.757 8.687M5 12h2m10 0h2m-6 6v-2m0-8V6m-2.828 4.243l-1.414 1.414M15.536 8.464l1.414-1.414M11 12a1 1 0 102 0 1 1 0 00-2 0z"
-                        />
-                      </svg>
+                      <MapPinIcon className="w-4 h-4 text-accent-light dark:text-accent-dark" />
                       <span>{exp.location}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <svg
-                        className="w-4 h-4 text-accent-light dark:text-accent-dark"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
+                      <ClockIcon className="w-4 h-4 text-accent-light dark:text-accent-dark" />
                       <span>{exp.duration}</span>
                     </div>
                   </div>
@@ -71,10 +52,10 @@ function Experience() {
                 <div className="flex gap-3">
                   <span
                     className={
-                      "px-4 py-2 rounded-lg text-sm font-bold transition-colors " +
+                      "px-4 py-2 rounded-lg text-sm font-bold transition-all " +
                       (exp.current
                         ? "bg-accent-light dark:bg-accent-dark text-white dark:text-bg-dark animate-pulse-slow"
-                        : "...")
+                        : "bg-bg-light dark:bg-bg-dark text-text-light-secondary dark:text-text-dark-secondary border border-border-light dark:border-border-dark")
                     }
                   >
                     {exp.current ? "Current" : exp.type}
@@ -96,19 +77,7 @@ function Experience() {
                       key={idx}
                       className="flex items-start gap-3 text-text-light-secondary dark:text-text-dark-secondary"
                     >
-                      <svg
-                        className="w-4 h-4 text-accent-light dark:text-accent-dark flex-shrink-0 mt-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronDoubleRightIcon className="w-4 h-4 text-accent-light dark:text-accent-dark flex-shrink-0 mt-1" />
                       <span>{responsibility}</span>
                     </li>
                   ))}
