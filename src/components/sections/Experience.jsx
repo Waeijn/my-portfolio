@@ -133,31 +133,6 @@ function Experience() {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 text-center bg-bg-light-surface dark:bg-bg-dark-surface p-8 rounded-2xl border border-border-light dark:border-border-dark">
-          <h2 className="text-2xl font-bold mb-4">
-            Looking for{" "}
-            <span className="text-accent-light dark:text-accent-dark">
-              Opportunities
-            </span>
-          </h2>
-          <p className="text-text-light-secondary dark:text-text-dark-secondary mb-6">
-            I am always open to discussing new projects, creative ideas, or
-            opportunities to be part of your vision.
-          </p>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="inline-block px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-bg-dark font-bold rounded-lg hover:opacity-90 transition-all shadow-lg shadow-accent-light/20 dark:shadow-accent-dark/10"
-          >
-            Get In Touch
-          </a>
-        </div>
       </div>
     </section>
   );

@@ -56,7 +56,7 @@ function Hero() {
             onClick={() => scrollToSection("projects")}
             className="px-8 py-3 bg-text-light-primary dark:bg-text-dark-primary text-bg-light dark:text-bg-dark font-medium rounded hover:bg-accent-light dark:hover:bg-accent-dark hover:text-white transition-all"
           >
-            View Work
+            View Projects
           </button>
           <button
             onClick={() => scrollToSection("contact")}

@@ -26,7 +26,7 @@ export const technologies = {
     {
       name: "Data & Databases",
       icon: "<DatabaseIcon />",
-      skills: [{ name: "MySQL" }, { name: "MongoDB" }],
+      skills: [{ name: "MySQL" }, { name: "PostgreSQL" }, { name: "MongoDB" }],
     },
     {
       name: "Infrastructure & Tools",
