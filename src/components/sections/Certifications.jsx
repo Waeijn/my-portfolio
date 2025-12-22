@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { certifications } from "../../data/certifications";
 import { ExternalLinkIcon } from "../../assets/icons";
+import CertificationGalleryModal from "./modals/CertificationGalleryModal";
 
 function Certifications() {
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+
+  const featuredCertifications = certifications.slice(0, 4);
+
   return (
     <section
       id="certifications"
@@ -22,14 +27,15 @@ function Certifications() {
           <div className="w-24 h-1 bg-accent-light dark:bg-accent-dark mx-auto mt-6 rounded-full"></div>
         </div>
 
+        {/* Featured Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {certifications.map((cert) => (
+          {featuredCertifications.map((cert) => (
             <div
               key={cert.id}
-              className="bg-bg-light-surface dark:bg-bg-dark-surface rounded-2xl border border-border-light dark:border-border-dark hover:border-accent-light dark:hover:border-accent-dark transition-all p-6 flex flex-col"
+              className="bg-bg-light-surface dark:bg-bg-dark-surface rounded-2xl border border-border-light dark:border-border-dark hover:border-accent-light dark:hover:border-accent-dark transition-all p-6 flex flex-col group"
             >
               <div className="flex justify-between items-start mb-3">
-                <h2 className="text-xl font-bold text-text-light-primary dark:text-text-dark-primary">
+                <h2 className="text-xl font-bold text-text-light-primary dark:text-text-dark-primary group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
                   {cert.title}
                 </h2>
                 <span className="text-sm text-text-light-muted dark:text-text-dark-muted whitespace-nowrap ml-4">
@@ -77,7 +83,25 @@ function Certifications() {
             </div>
           ))}
         </div>
+
+        {/* "See All" Action Button */}
+        {certifications.length > 4 && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setIsGalleryOpen(true)}
+              className="px-10 py-4 border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark font-bold rounded-xl hover:bg-accent-light dark:hover:bg-accent-dark hover:text-white dark:hover:text-bg-dark transition-all duration-300"
+            >
+              See All Certifications
+            </button>
+          </div>
+        )}
       </div>
+
+      {/* Modal for full list */}
+      <CertificationGalleryModal
+        isOpen={isGalleryOpen}
+        onClose={() => setIsGalleryOpen(false)}
+      />
     </section>
   );
 }

@@ -12,7 +12,7 @@ export const certifications = [
   {
     id: 2,
     title: "Introduction to Cybersecurity",
-    issuer: "CISCO Academy",
+    issuer: "Cisco Networking Academy",
     date: "December 2025",
     description:
       "Achieved student-level credential for explaining common cyber threats, attacks, vulnerabilities, and protection methods for individuals and organizations.",
@@ -38,5 +38,25 @@ export const certifications = [
       "Completed coursework focused on applying Human-Centered Design principles to problem-solving and product development.",
     skills: ["Human-Centered Design (HCD)", "UX Principles", "Design Thinking"],
     link: "https://www.canva.com/design-school/certification-award/56a4e5af-d84d-4869-b54a-f73705915ff1",
+  },
+  {
+    id: 5,
+    title: "Networking Basics",
+    issuer: "Cisco Networking Academy",
+    date: "In Progress",
+    description:
+      "Comprehensive study of network architectures, IP addressing, and the fundamentals of Ethernet and wireless communications.",
+    skills: ["TCP/IP", "Subnetting", "Routing & Switching", "Network Security"],
+    link: "https://www.credly.com/badges/",
+  },
+  {
+    id: 6,
+    title: "Certified Full Stack Developer",
+    issuer: "freeCodeCamp",
+    date: "In Progress",
+    description:
+      "Extensive curriculum covering responsive web design, JavaScript algorithms, and full-stack integration using the MERN stack.",
+    skills: ["React.js", "Node.js", "MongoDB", "Data Structures"],
+    link: "https://freecodecamp.org/certification/waeijn/",
   },
 ];
