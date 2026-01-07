@@ -6,7 +6,7 @@ export const projects = [
       "A high-performance e-commerce platform specializing in premium tech gadgets, featuring a modern UI/UX and a seamless shopping experience.",
     longDescription:
       "AuraTech is a full-stack digital storefront built to handle tech inventory. It integrates a secure payment gateway, dynamic product filtering for hardware specs, and a responsive admin dashboard for real-time order tracking and stock management.",
-    technologies: ["React", "Laravel", "MySQL", "Bootstrap"],
+    technologies: ["React", "Bootstrap", "Laravel", "phpMyAdmin", "Docker"],
     features: [
       "Dynamic Tech Product Catalog",
       "Secure Stripe Payment Integration",
@@ -42,7 +42,7 @@ export const projects = [
       "A robust Java-based Point of Sale system designed for bookstores to manage inventory, process sales transactions, and generate digital receipts.",
     longDescription:
       "Developed using Java Swing for a responsive GUI and JDBC for database connectivity, this system streamlines the retail workflow. It features a local-first architecture with high-performance SQL integration for managing large book catalogs and real-time stock updates.",
-    technologies: ["Java", "Java Swing", "MySQL", "JDBC", "JasperReports"],
+    technologies: ["Java", "Java Swing", "JDBC", "JasperReports"],
     features: [
       "Inventory & Stock Management",
       "Automated Billing & Receipt Generation",
